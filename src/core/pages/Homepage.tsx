@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "antd";
+import Header from "../../organisms/Header/Header";
 const Homepage = () => {
   return (
     <div>
-      test
-      <Button type="primary"></Button>
+      <Header />
     </div>
   );
 };

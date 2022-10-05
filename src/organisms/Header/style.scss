@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .left-side {
+    display: flex;
+    width: 50%;
+  }
+
+  .right-side {
+    button {
+      border-radius: 12px;
+      background-color: #f94144;
+      height: 40px;
+    }
+  }
+
+  img {
+    width: 105px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 35px;
+  }
+}
