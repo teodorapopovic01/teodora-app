@@ -31,7 +31,7 @@ const Homepage = () => {
     dispatch(setPosts(data));
   }
 
-  useEffect(() => setPostss(store), []);
+  useEffect(() => data && setPostss(data), [data]);
 
   function setFiltersValues(value: string | number, name: string) {
     setFilters({ ...filters, [name]: value });
