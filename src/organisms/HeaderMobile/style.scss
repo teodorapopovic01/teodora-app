@@ -1,0 +1,14 @@
+@import "../../assets/css/colors.scss";
+
+.header-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+  padding: 10px;
+  width: 100%;
+
+  img {
+    object-fit: contain;
+  }
+}

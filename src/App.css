@@ -5,9 +5,41 @@ body,
 div#root {
   height: -webkit-fill-available;
   min-height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 .page-layout {
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 2rem 20px;
+}
+.ant-select {
+  height: 40px !important;
+}
+.ant-input-affix-wrapper,
+.ant-select,
+.ant-select-open {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 0 11px;
+  border: none !important;
+}
+.ant-select > .ant-select-selector,
+.ant-select-focused {
+  background-color: #f4f4f4 !important;
+  border-radius: 8px;
+  padding: 0 11px;
+  border: none !important;
+}
+@media only screen and (max-width: 800px) {
+  html,
+  body,
+  div#root {
+    background-color: lightblue;
+  }
+
+  .page-layout {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0px;
+  }
 }

@@ -1,25 +1,43 @@
+@import "../../assets/css/colors.scss";
+
 .header {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
+  background-color: $white;
+  justify-content: center;
 
-  .left-side {
+  .content {
+    width: 80%;
     display: flex;
-    width: 50%;
-  }
-
-  .right-side {
-    button {
-      border-radius: 12px;
-      background-color: #f94144;
-      height: 40px;
+    justify-content: space-between;
+    padding: 10px;
+    .left-side {
+      display: flex;
+      width: 50%;
     }
-  }
 
-  img {
-    width: 105px;
-    height: 45px;
-    object-fit: contain;
-    margin-right: 35px;
+    .right-side {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        border-radius: 12px;
+        background-color: $primary;
+        height: 40px;
+      }
+      svg {
+        margin-right: 5px;
+      }
+      span {
+        font-weight: 600;
+        margin-right: 25px;
+      }
+    }
+
+    img {
+      width: 105px;
+      height: 45px;
+      object-fit: contain;
+      margin-right: 35px;
+    }
   }
 }

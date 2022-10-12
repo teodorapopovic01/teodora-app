@@ -1,12 +1,14 @@
+@import "../../assets/css/colors.scss";
+
 .input {
   width: 350px;
   border-radius: 8px;
   height: 45px;
-  background-color: #f4f4f4;
+  background-color: $lightGrey;
 
   .ant-input-wrapper,
   .ant-input-group-addon {
-    background-color: #f4f4f4;
+    background-color: $lightGrey;
     border-radius: 8px;
 
     input {
@@ -16,12 +18,12 @@
 
   .ant-input-search-button {
     border-radius: 8px !important;
-    background: #f94144;
+    background: $primary;
     width: 45px;
     height: 45px;
 
     svg {
-      fill: #ffffff;
+      fill: $white;
     }
   }
 }

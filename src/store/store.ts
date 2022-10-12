@@ -1,18 +1,18 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// // import projectReducer from "./slices/project-slice";
+import { configureStore } from "@reduxjs/toolkit";
+import postsSlice from "./slices/posts-slice";
 
-// export const store = configureStore({
-//   reducer: {
-//     // @ts-ignore
-//     // project: undoable(projectReducer),
+export const store = configureStore({
+  reducer: {
+    // @ts-ignore
 
-//   },
-//   middleware: (getDefaultMiddleware) => {
-//     return getDefaultMiddleware({
-//       serializableCheck: false,
-//     });
-//   },
-// });
+    posts: postsSlice,
+  },
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware({
+      serializableCheck: false,
+    });
+  },
+});
 
-// export type AppDispatch = typeof store.dispatch;
-// export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;

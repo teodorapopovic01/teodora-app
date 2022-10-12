@@ -1,0 +1,30 @@
+@import "../../assets/css/colors.scss";
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  column-gap: 15px;
+  row-gap: 30px;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.ant-pagination {
+  display: flex;
+  justify-content: center !important;
+  margin-top: 30px;
+}
+
+.ant-pagination-item-active,
+.ant-pagination-item:hover {
+  border-color: $primary;
+  a {
+    color: $primary;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .posts {
+    display: flex;
+    flex-direction: column;
+  }
+}

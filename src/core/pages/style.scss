@@ -1,0 +1,35 @@
+@import "../../assets/css/colors.scss";
+
+.homepage {
+  background-color: $bg;
+
+  div > .posts-heading {
+    color: $black;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .detailed-searched {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    span {
+      color: $black;
+      font-size: 15px;
+      font-weight: 500;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .homepage {
+    background-color: $bg;
+    // min-width: fit-content;
+  }
+}
