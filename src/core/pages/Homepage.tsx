@@ -17,6 +17,7 @@ const Homepage = () => {
   let width = window.screen.width;
   const { data } = useGetPosts();
   const [posts, setPostss] = useState(store);
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [filters, setFilters] = useState({
     category: "",
     location: "",
@@ -33,7 +34,7 @@ const Homepage = () => {
 
   useEffect(() => data && setPostss(data), [data]);
 
-  function setFiltersValues(value: string | number, name: string) {
+  function setFiltersValues(value: any, name: string) {
     setFilters({ ...filters, [name]: value });
   }
   useEffect(() => {
@@ -41,6 +42,23 @@ const Homepage = () => {
   }, [data]);
 
   function handleFilters() {
+    if (
+      !filters.area.match(/^-?\d+(\.\d+)?$/) ||
+      !filters.price.match(/^-?\d+(\.\d+)?$/) ||
+      !filters.minRooms.match(/^-?\d+(\.\d+)?$/) ||
+      !filters.maxRooms.match(/^-?\d+(\.\d+)?$/)
+    ) {
+      const message = "Vrijednost mora biti broj!";
+      setErrorMessage(message);
+      setFilters({
+        category: "",
+        location: "",
+        area: "",
+        price: "",
+        minRooms: "",
+        maxRooms: "",
+      });
+    }
     if (filters.category !== "") {
       if (
         filters.area !== "" &&
@@ -437,6 +455,7 @@ const Homepage = () => {
           filters={filters}
           handleFilters={handleFilters}
           setFiltersValues={setFiltersValues}
+          errorMessage={errorMessage}
         />
         <div className="detailed-searched">
           <span>Detaljnija pretraga</span>

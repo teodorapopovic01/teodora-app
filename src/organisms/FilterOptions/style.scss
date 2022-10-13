@@ -11,21 +11,33 @@
 
   .room-number {
     display: flex;
-
-    input {
+    .input-wrapper-first {
+      display: flex;
+      flex-direction: column;
       width: 50%;
-
-      &:first-child {
+      input {
         border-right: 1px solid $secondaryGrey;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
+        width: 100%;
       }
-      &:last-child {
+      .warning {
+        color: $primary;
+        font-size: 12px;
+      }
+    }
+    .input-wrapper-second {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      input {
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
+        width: 100%;
       }
     }
   }
+
   .radios {
     display: flex;
     flex-direction: column;
@@ -48,6 +60,16 @@
     column-gap: 15px;
     row-gap: 15px;
     justify-content: space-between;
+
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .warning {
+        color: $primary;
+        font-size: 12px;
+      }
+    }
 
     input {
       height: 40px;
